@@ -1,0 +1,21 @@
+{
+  "name": "obd-waste-pitch-deck",
+  "version": "1.0.0",
+  "description": "OBD-Waste Solutions Investor Pitch Deck",
+  "main": "index.html",
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js",
+    "install-deps": "npm install puppeteer"
+  },
+  "keywords": [
+    "pitch-deck",
+    "investor-deck",
+    "waste-management"
+  ],
+  "author": "Obed Danso",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
+
