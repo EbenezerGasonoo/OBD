@@ -510,8 +510,7 @@ p { font-size: 18px; color: var(--muted); line-height: 1.6; margin: 0 0 20px 0; 
     display: flex; 
     align-items: flex-end; 
     justify-content: space-between; 
-    height: 200px; 
-    min-height: 200px;
+    height: 250px; 
     width: 100%; 
     border-bottom: 2px solid var(--border); 
     transition: border-color 0.3s ease;
@@ -742,94 +741,6 @@ html {
 body {
     animation: fadeIn 0.8s ease-in;
 }
-
-/* PRINT & PDF EXPORT STYLES */
-@media print {
-    @page {
-        size: 1280px 720px;
-        margin: 0;
-    }
-    
-    body {
-        background: #050505;
-        padding: 0;
-        gap: 0;
-        display: block;
-    }
-    
-    .slide {
-        width: 1280px;
-        height: 720px;
-        page-break-after: always;
-        page-break-inside: avoid;
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-        border: none;
-    }
-    
-    .slide:last-child {
-        page-break-after: auto;
-    }
-    
-    /* Hide navigation and theme toggle */
-    .nav-controls,
-    .theme-toggle,
-    .progress-indicator {
-        display: none !important;
-    }
-    
-    /* Ensure all content is visible */
-    .content {
-        padding: 60px 80px;
-        height: 100%;
-        overflow: visible;
-    }
-    
-    /* Make sure animations are complete */
-    .animate-up,
-    .card,
-    .bar {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
-    
-    /* Ensure bars are visible */
-    .bar {
-        transform: scaleY(1) !important;
-        opacity: 1 !important;
-    }
-    
-    /* Ensure images load */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    /* Force colors for print */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-    
-    /* Ensure backgrounds print */
-    .card,
-    .tag,
-    .bar,
-    .slide {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-}
-
-/* PDF Export Helper - Add to HTML head */
-/* Use browser's "Save as PDF" or "Print to PDF" with these settings:
-   - Paper size: Custom 1280x720px
-   - Margins: None
-   - Background graphics: Enabled
-   - Scale: 100%
-*/
 
 /* RESPONSIVE */
 @media (max-width: 1400px) {
